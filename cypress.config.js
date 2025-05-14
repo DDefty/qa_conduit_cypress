@@ -1,7 +1,10 @@
-const { defineConfig } = require("cypress");
+require('dotenv').config();
 
-module.exports = defineConfig({
+module.exports = {
   e2e: {
-    baseUrl: "https://conduit.mate.academy",
-  },
-});
+    env: {
+      email: process.env.CYPRESS_email,
+      password: process.env.CYPRESS_password
+    }
+  }
+};

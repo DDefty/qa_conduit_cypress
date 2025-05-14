@@ -6,3 +6,6 @@ cypress/screenshots/
 
 cypress.config.local.*
 cypress.env.
+
+.env
+*.env.local
