@@ -15,7 +15,7 @@ function generateStrongPassword() {
   });
 }
 function generateUsername() {
-  return faker.internet.userName();
+  return faker.string.alpha({ length: 10 }); 
 }
 module.exports = {
   generateRandomEmail,
