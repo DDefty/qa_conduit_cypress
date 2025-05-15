@@ -13,4 +13,11 @@ describe('Profile functionality', () => {
     cy.get('button').contains('Update Settings').click();
     cy.contains('QA automation enthusiast');
   });
+
+    it('should logout successfully', () => {
+    cy.contains('Settings').click();
+    cy.contains('Or click here to logout.').click();
+    cy.url().should('include', '/');
+    cy.contains('Sign in').should('be.visible');
+  });
 });
