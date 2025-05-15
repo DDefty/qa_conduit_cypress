@@ -11,5 +11,6 @@ describe('Register functionality', () => {
         cy.get('input[type="Email"]').type(email);
         cy.get('input[type="Password"]').type(password);
         cy.get('button[type="submit"]').click();
+        cy.get('.navbar').should('contain', username.toLowerCase());
     });
 });
