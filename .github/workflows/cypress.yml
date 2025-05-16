@@ -13,6 +13,7 @@ jobs:
     env:
       CYPRESS_email: ${{ secrets.EMAIL }}
       CYPRESS_password: ${{ secrets.PASSWORD }}
+      CYPRESS_username: ${{ secrets.USERNAME}}
 
     steps:
       - name: Checkout code

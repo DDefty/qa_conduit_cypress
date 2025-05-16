@@ -1,6 +1,7 @@
 describe('Login functionality', () => {
   beforeEach(() => {
     cy.visit('https://conduit.mate.academy/');
+    cy.contains('Sign in').click();
   });
 
   it('should login with valid credentials', () => {
