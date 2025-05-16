@@ -1,5 +1,7 @@
 describe('Profile functionality', () => {
   beforeEach(() => {
+    cy.visit('https://conduit.mate.academy/');
+    cy.contains('Sign in').click();
     cy.login();
   });
 
