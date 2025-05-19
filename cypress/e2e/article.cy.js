@@ -24,4 +24,18 @@ describe('Article functionality', () => {
         cy.contains(article.title);
         cy.contains(article.tag);
     })
+    it('should edit the article', () => {
+        cy.contains(Cypress.env('username')).click();
+        cy.contains('Article title: ' + article.title).click();
+        cy.contains('Edit Article').click();
+
+        cy.get('textarea[placeholder="Write your article (in markdown)"]')
+        .clear()
+        .type(article.updatedBody);
+
+        cy.contains('Update Article').click();
+
+        cy.contains(article.updatedBody);
+        cy.should('not.contain', article.body);
+    });
 }) 
