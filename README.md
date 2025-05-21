@@ -20,4 +20,4 @@ This project contains end-to-end tests written with **Cypress**, covering key us
 
 - [Cypress](https://www.cypress.io/)  
 - [Faker.js](https://fakerjs.dev/)  
-- CI/CD: *e.g. GitHub Actions or GitLab CI (adjust as needed)*
+- CI/CD: GitHub Actions
