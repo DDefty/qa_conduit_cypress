@@ -1,4 +1,4 @@
-# 🧪 Cypress E2E Tests – Login, Registration, Profile & Article (POM + CI/CD)
+# 🧪 Cypress E2E Tests – Login, Registration, Profile & Article (CI/CD)
 
 This project contains end-to-end tests written with **Cypress**, covering key user flows for a web application.
 
@@ -11,7 +11,6 @@ This project contains end-to-end tests written with **Cypress**, covering key us
 
 ## 🧱 Key Features
 
-- **Page Object Model (POM)** – modular and reusable code structure  
 - **Faker** – generates random user data for test isolation  
 - **CI/CD integration** – automated test execution on push/pull using a CI pipeline  
 - **Cypress best practices** – clean selectors, custom commands, fixtures, etc.
