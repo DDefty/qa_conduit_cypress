@@ -1,6 +1,6 @@
 describe('Article functionality', () => {
     const article = {
-        title: 'QA automation enthusiast',
+        title: 'I love QA',
         description: 'Quality Assurance',
         body: 'QA  enthusiast',
         tag: 'QA',
@@ -37,6 +37,14 @@ describe('Article functionality', () => {
 
         cy.contains(article.updatedBody);
         cy.should('not.contain', article.body);
+    });
+    it('shoud write a comment', () => {
+        cy.contains(Cypress.env('username')).click();
+        cy.contains('Article title: ' + article.title).click();
+        cy.get('textarea[placeholder="Write a comment..."]').type('Great article!');
+        cy.contains('Post Comment').click();
+
+        cy.contains('Great article!');
     });
     it('should delete the article', () => {
         cy.contains(Cypress.env('username')).click();
