@@ -38,4 +38,14 @@ describe('Article functionality', () => {
         cy.contains(article.updatedBody);
         cy.should('not.contain', article.body);
     });
+    it('should delete the article', () => {
+        cy.contains(Cypress.env('username')).click();
+        cy.contains('Article title: ' +article.title).click();
+        cy.on('window:confirm', () => true);
+        cy.contains('Delete Article').click();
+
+        cy.contains(Cypress.env('username')).click();
+        cy.reload();
+        cy.contains(article.title).should('not.exist');
+    });
 }) 
