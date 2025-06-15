@@ -46,6 +46,13 @@ describe('Article functionality', () => {
 
         cy.contains('Great article!');
     });
+    it('should like the article', () => {
+        cy.contains(Cypress.env('username')).click();
+        cy.get('.article-meta').contains('0');
+        cy.get('.ion-heart').click();
+
+        cy.get('.article-meta').contains('1');
+    });
     it('should delete the article', () => {
         cy.contains(Cypress.env('username')).click();
         cy.contains('Article title: ' +article.title).click();
@@ -55,5 +62,9 @@ describe('Article functionality', () => {
         cy.contains(Cypress.env('username')).click();
         cy.reload();
         cy.contains(article.title).should('not.exist');
+    });
+    it('Should open article from global feed', () => {
+      cy.contains('Global Feed').click();
+      cy.contains('Article title:').click();
     });
 }) 
