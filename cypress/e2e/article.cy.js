@@ -1,9 +1,9 @@
 describe('Article functionality', () => {
     const article = {
-        title: 'I love QA',
-        description: 'Quality Assurance',
+        title: '1234',
+        description: 'Quality Assurancee',
         body: 'QA  enthusiast',
-        tag: 'QA',
+        tag: 'Test',
         updatedBody: 'Quality Assurance entuhusiast'
     };
 
